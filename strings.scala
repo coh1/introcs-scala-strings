@@ -22,9 +22,22 @@ object strings  {
  */
 
 
-   def getSentenceType(sentence : String) : String = {
-     
-      "unknown"
+    def getSentenceType(sentence : String) : String = {
+    
+    "unknown"
+    if (sentence.endsWith("?"))
+        "interrogative"
+    else if (sentence.endsWith("."))
+        "declarative"
+    else if (sentence.endsWith("!"))
+        "exclamatory"
+    else
+	    "unknown"
+       
+       
+       
+       
+       
    }
 
 /*
@@ -41,7 +54,14 @@ object strings  {
 
    def getFormattedName(name : String) : String = {
      
-      "name not calculated yet"
+    //  "name not calculated yet"
+    //   print ( "Please enter a name: ")
+    // var nameIn = readLine()
+    //if (nameIn contains " "){
+    //   var Array(first,last) = nameIn.split(" ")
+    //   println("Reformatted name: "+last + ", " + first )}
+    // else
+    //   println(nameIn)
    }
 
 }
